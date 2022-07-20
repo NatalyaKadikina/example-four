@@ -5,19 +5,23 @@ public class Main {
     public static void main(String[] args) {
 
         // Задание 1
-        int a = 0;
-        while (a < 10) {
-            System.out.print(++a + " ");
+        int currentNum = 0;
+
+        while (currentNum < 10) {
+            System.out.print(++currentNum + " ");
         }
+
             System.out.println();
-        for (a = 10; a > 0; a--) {
-            System.out.print(a + " ");
+
+        for (; currentNum > 0; currentNum--) {
+            System.out.print(currentNum + " ");
         }
 
         // Задание 2
             System.out.println();
-        for (int day = 1; day <= 31; day= day+7) {
-            System.out.println("Сегодня пятница, " + day + " число. Необходимо подготовить отчет");
+        int fierstFriday = 1;
+        for (int currentFriday = fierstFriday; currentFriday <= 31; currentFriday += 7) {
+            System.out.println("Сегодня пятница, " + currentFriday + " -е число. Необходимо подготовить отчет.");
         }
 
         // Задание 3
@@ -25,7 +29,7 @@ public class Main {
         int year = 2022;
         int yearStart = year - 200;
         int yearFinish = year + 100;
-        for (int y = yearStart; y <= yearFinish; y += 1) {
+        for (int y = yearStart; y <= yearFinish; y++) {
             if (y % 79 == 0) {
                 System.out.println(y);
             }
